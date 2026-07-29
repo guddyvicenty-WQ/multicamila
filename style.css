@@ -1,0 +1,276 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2ede7;
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    color: #2c241e;
+    padding: 1.8rem 1.2rem;
+    line-height: 1.6;
+}
+
+body > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fffcf7;
+    padding: 2rem 2.2rem 2.5rem;
+    border-radius: 28px 28px 20px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e7dfd6;
+}
+
+header {
+    border-bottom: 3px dashed #dacfc1;
+    padding-bottom: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #3b2c21;
+}
+
+header hr {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    background: #f3ede6;
+    padding: 0.7rem 1.5rem;
+    border-radius: 60px;
+    border: 1px solid #e0d4c6;
+    margin-bottom: 0.8rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3d2c21;
+    padding: 0.3rem 0.8rem;
+    border-radius: 40px;
+    font-weight: 450;
+    transition: 0.15s;
+}
+
+nav a:hover {
+    background: #dccfc1;
+    color: #1f160f;
+}
+
+hr {
+    border: none;
+    border-top: 2px dotted #dccfc1;
+    margin: 1.6rem 0;
+}
+
+section {
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #3b2c21;
+    border-left: 6px solid #b9a58f;
+    padding-left: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fcf9f5;
+    border: 1px solid #dccfc1;
+    font-size: 0.98rem;
+}
+
+th {
+    background: #e9ddd0;
+    color: #2c1f17;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d0c0b0;
+}
+
+td {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #dccfc1;
+}
+
+tr:nth-child(even) {
+    background: #f5efe8;
+}
+
+ul {
+    background: #fcf9f5;
+    padding: 1.2rem 1.8rem;
+    border-radius: 18px;
+    border: 1px solid #e7dfd6;
+    list-style-type: square;
+}
+
+li {
+    margin-bottom: 0.3rem;
+    color: #2c241e;
+}
+
+address {
+    background: #f3ede6;
+    padding: 1.2rem 1.8rem;
+    border-radius: 20px;
+    border-left: 6px solid #b9a58f;
+    font-style: normal;
+    line-height: 1.9;
+    color: #2c241e;
+}
+
+address b {
+    color: #3b2c21;
+}
+
+footer {
+    margin-top: 2.2rem;
+    padding-top: 1.2rem;
+    border-top: 2px solid #e7dfd6;
+    text-align: center;
+    color: #5f4c3b;
+    font-size: 0.95rem;
+}
+
+footer span {
+    background: #eee7df;
+    padding: 0.1rem 0.8rem;
+    border-radius: 40px;
+}
+
+small {
+    color: #7a695a;
+}
+
+strong, b {
+    color: #3b2c21;
+}
+
+@media (max-width: 640px) {
+
+    body {
+        padding: 0.8rem;
+    }
+
+    body > * {
+        padding: 1.2rem 1rem;
+        border-radius: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4rem;
+        border-radius: 28px;
+        padding: 0.8rem 1rem;
+        background: #f3ede6;
+        border: 1px solid #e0d4c6;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0.8rem;
+        border-radius: 40px;
+        background: transparent;
+    }
+
+    nav a:hover {
+        background: #dccfc1;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        border: 1px solid #dccfc1;
+        margin-bottom: 0.8rem;
+        background: #fcf9f5;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 0.4rem 0;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #ede6dc;
+        padding: 0.5rem 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td:first-child::before {
+        content: "Categoría";
+        font-weight: 600;
+        color: #3b2c21;
+    }
+    td:nth-child(2)::before {
+        content: "Velocidad";
+        font-weight: 600;
+        color: #3b2c21;
+    }
+    td:nth-child(3)::before {
+        content: "Precio";
+        font-weight: 600;
+        color: #3b2c21;
+    }
+
+    td::before {
+        width: 40%;
+        flex-shrink: 0;
+    }
+
+    ul {
+        padding: 1rem 1.2rem;
+    }
+
+    address {
+        padding: 1rem 1.2rem;
+        border-left-width: 4px;
+    }
+
+    footer {
+        font-size: 0.85rem;
+        padding-top: 1rem;
+    }
+
+    /* separadores */
+    hr {
+        margin: 1.2rem 0;
+    }
+}
