@@ -15,3 +15,15 @@ function alternarModo() {
 }
 
 botonModo.addEventListener('click', alternarModo);
+
+function cambiarTexto() {
+    const header = document.querySelector('header h1');
+    if (header.textContent === '¡Bienvenido al Multicentro Camila!') {
+        header.textContent = '¡Explora nuestros productos!';
+    } else {
+        header.textContent = '¡Bienvenido al Multicentro Camila!';
+    }   
+}
+
+const botonTexto = document.querySelector('#btn-tema2');
+botonTexto.addEventListener('click', cambiarTexto);
