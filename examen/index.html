@@ -1,0 +1,114 @@
+<!-- Hoy no hay nada que memorizar: hay que construir. Van a hacer una mini-página nueva, pequeña, con todo lo que ya practicaron desde la clase 1 hasta la clase 6. Tienen 90 minutos y les alcanza de sobra si van en orden: primero el HTML, después el CSS, al final el JavaScript.
+
+Y una advertencia de estrategia: si al minuto 60 del cronómetro todavía no tocaron el JavaScript, dejen el CSS como esté y háganlo. Son 3 puntos en 10 minutos. Después vuelven a pulir el CSS con lo que les quede.
+
+QUÉ VAN A CONSTRUIR
+Una página de una sola pantalla para un negocio. El negocio, los productos y los textos exactos están en la sección "Tu caso", más abajo. Cada uno trabaja el caso que le toca.
+
+ESTRUCTURA MÍNIMA EXIGIDA (esto es lo que se califica)
+1) Un header con un solo h1 (el nombre del negocio) y un nav con 3 enlaces internos: Inicio, la sección de productos o servicios, y Contacto. Los enlaces usan anclas (href="#inicio", etc.). Los 3 enlaces van directamente dentro del nav, sin lista. Si prefieren usar ul, el display: flex y el gap van en la ul, no en el nav.
+2) Un main con dos section, cada una con su h2:
+   - la primera, con un párrafo corto y una lista (ul) de 3 items con nombre y precio en Bs;
+   - la segunda, con un formulario de 3 campos y, después de cerrar el formulario, un botón y un párrafo vacío para el mensaje.
+3) Un footer con su placa personal (ver más abajo).
+4) Un archivo styles.css propio, enlazado con link desde el head, que incluya: una paleta de 3 colores en hex, una tipografía legible con line-height, un contenedor centrado (max-width + margin: 0 auto), sus tarjetas o secciones con box model (padding, border, border-radius), el nav en horizontal con Flexbox (display: flex y gap) y enlaces sin subrayado, y UNA media query real que cambie algo que se vea de verdad en el modo móvil de DevTools (por ejemplo: el nav pasa a display: block y los enlaces quedan uno debajo del otro, o las tarjetas pasan a width: 100%).
+   En el head, además del link al CSS, va la etiqueta <meta name="viewport" content="width=device-width, initial-scale=1.0"> — sin ella la media query no se activa en el modo móvil. Y dejen el <meta charset="UTF-8"> que ya usan desde la clase 1, si no las tildes se rompen.
+5) Un archivo script.js propio, enlazado con la etiqueta script al final del body, justo antes de cerrar body.
+
+Copien esta regla tal cual en su CSS, la van a necesitar para el mensaje:
+.oculto { display: none; }
+
+Al #mensaje pónganle color, borde o padding si quieren, pero NO le pongan display: si lo hacen, el id le gana a la clase .oculto y el mensaje ya no se esconde.
+
+LA PLACA PERSONAL (obligatoria, vale puntos en "orden y entrega")
+- El title del documento y el h1 llevan el nombre del negocio de su caso.
+- El footer lleva exactamente: Parcial 1 - [su nombre completo] - 3 de agosto de 2026
+- El mensaje que muestra el botón con JavaScript lleva su nombre completo escrito en su código. Es su firma.
+
+REGLAS DEL EXAMEN
+- Individual. Pueden consultar sus apuntes, sus propios repositorios de las clases anteriores y documentación oficial (MDN). Sin IA durante el examen.
+- Prohibido compartir código o pantalla con compañeros, y prohibido pedir o pasar archivos. Cada uno entrega lo suyo.
+- CSS propio: NO se permite Tailwind, Bootstrap ni ningún framework o plantilla. Se evalúa la base, la que escribieron ustedes.
+- No se pide nada que no hayamos visto en las clases 1 a 6.
+
+CÓMO SE ENTREGA
+1) Dentro de SU repositorio del curso (el mismo que tiene GitHub Pages) creen una carpeta nueva llamada parcial1 con tres archivos: index.html, styles.css y script.js.
+   Si trabajan desde la web de GitHub, la carpeta se crea sola: en Add file → Create new file escriban parcial1/index.html como nombre del archivo.
+2) Hagan commit y push. Hora límite del push: el minuto 90 del cronómetro, es decir 18:00. El timestamp de su último push es la evidencia de tiempo. Pueden hacer varios commits: se califica el último que tenga esa hora o antes. Lo que suban después de esa hora no se corrige.
+3) Tienen 5 minutos más, hasta el minuto 95, para pegar en esta tarea de Classroom el enlace a la carpeta parcial1 de su repositorio (o al último commit) y marcar "Entregar".
+
+No se aceptan archivos comprimidos (zip o rar) ni archivos sueltos subidos a Classroom: la única entrega válida es el enlace a su repositorio.
+Su página queda viva sola en su-usuario.github.io/su-repo/parcial1/ — si la quieren mostrar, ahí está.
+
+Este parcial tiene fecha única: no admite entrega tardía.
+
+SI SE LES CORTA EL INTERNET
+Avisen por el chat de Teams o por mensaje apenas puedan, guarden una captura del error y sigan trabajando en su computadora: en VS Code no se pierde nada. Hacen el push cuando vuelva la conexión y el caso se resuelve individualmente con el registro.
+
+SI ALGO DEL ENUNCIADO ESTÁ CONFUSO
+Si una instrucción resulta genuinamente ambigua o está mal escrita, se resuelve a favor de ustedes. Y si el problema afecta a buena parte del curso, ese punto se anula y todos reciben su puntaje completo. Nadie pierde puntos por un error mío.
+
+CÓMO SE CALIFICA (rúbrica ya publicada)
+HTML semántico 5 + CSS y responsive 5 + JavaScript básico y DOM 3 + orden y entrega 2 = 15 puntos.
+
+
+TU CASO: LAVANDERÍA BURBUJAS
+
+Burbujas es una lavandería de barrio que quiere su primera página. Construyan esto:
+
+TITLE Y H1
+- title: Lavandería Burbujas
+- h1 (dentro del header): Lavandería Burbujas
+
+NAV (3 enlaces internos, dentro del header)
+- Inicio, que apunta a #inicio (el id va en el header)
+- Nuestros lavados, que apunta a #lavados
+- Contacto, que apunta a #contacto
+
+SECTION 1 — id="lavados"
+- h2: Nuestros lavados
+- Un párrafo corto de una o dos líneas presentando la lavandería (lo escriben ustedes).
+- Una lista ul con exactamente estos 3 items:
+  Lavado por kilo - Bs 15
+  Planchado de camisa - Bs 8
+  Lavado de edredón - Bs 35
+
+SECTION 2 — id="contacto"
+- h2: Deja tu encargo
+- Un formulario con estos 3 campos, cada uno con su label conectado con for:
+  1. Nombre completo — input type="text" id="nombre" required
+  2. Correo electrónico — input type="email" id="correo" required
+  3. Tu encargo — textarea id="encargo"
+- Después de cerrar el formulario (fuera del form) van el botón y el párrafo vacío:
+  - un botón: button type="button" id="btn-confirmar" con el texto Confirmar encargo
+    (va con type="button" a propósito, así la página no se recarga)
+  - un párrafo vacío: p id="mensaje" class="oculto"
+
+FOOTER
+Parcial 1 - [su nombre completo] - 3 de agosto de 2026
+Ojo: esa fecha va tal cual. Es la del parcial, no la de tu turno — no la cambies.
+
+LO QUE DEBE HACER EL BOTÓN (JavaScript, en script.js)
+Al hacer click en el botón Confirmar encargo, el párrafo vacío debe mostrar este texto:
+
+Encargo recibido - te atiende [su nombre completo]
+
+Para lograrlo necesitan, todo dentro de una función: seleccionar el párrafo con document.querySelector, ponerle el texto con textContent, y quitarle la clase oculto con classList.remove para que se vea. La función se conecta al botón con addEventListener("click", ...). Su nombre completo va escrito dentro del texto, en su código: es su firma.
+
+ANTES DE ENTREGAR, VERIFICA
+Esto es el mínimo para no entregar mal, no la rúbrica completa: los detalles del CSS y del JavaScript están en los puntos 4 y 5 de arriba.
+[ ] La carpeta se llama parcial1 y está dentro de tu repositorio del curso, con index.html, styles.css y script.js.
+[ ] Hay un solo h1, y cada section tiene su h2.
+[ ] Usaste header, nav, main, section y footer (no todo con div).
+[ ] Los 3 enlaces del nav saltan de verdad a su sección al hacer click.
+[ ] Los 3 campos tienen su label conectado con for, y nombre y correo llevan required.
+[ ] El CSS está en styles.css y se ve aplicado en la página (link dentro del head).
+[ ] Tu CSS tiene 3 colores en hex, una tipografía declarada con line-height, y el contenido centrado con max-width y margin: 0 auto.
+[ ] Tus secciones o tarjetas tienen padding y borde o esquinas redondeadas.
+[ ] El nav se ve en fila, con gap declarado y los enlaces sin subrayado.
+[ ] Abriste el modo móvil de DevTools y comprobaste que la media query cambia algo de verdad.
+[ ] El script.js está enlazado al final del body, y adentro usaste una función, addEventListener, querySelector, textContent y classList.remove.
+[ ] El botón Confirmar encargo muestra el mensaje con tu nombre completo al hacer click.
+[ ] El title y el h1 dicen Lavandería Burbujas, y el footer tiene tu placa: Parcial 1 - tu nombre completo - 3 de agosto de 2026.
+[ ] Tu código está indentado y no quedaron restos de otro ejemplo ni bloques comentados a medio hacer.
+[ ] Hiciste push antes del minuto 90 y pegaste el enlace en la tarea de Classroom antes del minuto 95. -->
