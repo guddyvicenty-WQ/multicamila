@@ -121,7 +121,44 @@ Esto es el mínimo para no entregar mal, no la rúbrica completa: los detalles d
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+  <header id="inicio">
+    <h1>Lavandería Burbujas</h1>
+    <nav>
+      <a href="#inicio">Inicio</a> |
+      <a href="#lavados">Nuestros lavados</a> |
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section id="lavados">
+      <h2>Nuestros lavados</h2>
+      <p>te ofrecemos estos servicios de alta calidad.</p>
+      <ul>
+        <li>lavado por kilo - Bs 15</li>
+        <li>planchado de camisa - Bs 8</li>
+        <li>lavado de edredón - Bs 35</li>
+      </ul>
+
+    </section>
+
+    <section id="contacto">
+      <h2>deja tu encargo</h2>
+      <form>
+        <label for="nombre">nombre completo:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="correo">correo electronico:</label>
+        <input type="email" id="correo" required>
+
+        <label for="encargo">tu encargo:</label>
+        <textarea id="encargo"></textarea>
+      </form>
+      <button type="button" id="btn-confirmar">confirmar encargo</button>
+      <p id="mensaje" class="oculto"></p>
+  </main>
+
+  <footer>
+    Parcial 1 - guddy steven vincenty echegaray - 3 de agosto de 2026
   <script src="script.js">
 
   </script>
