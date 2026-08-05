@@ -282,6 +282,23 @@ body.oscuro strong,
 body.oscuro b {
     color: #f8f7f6 !important;
 }
+.aviso {
+    color: #b30000;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+.aviso.error {
+    display: block;
+    background-color: #3a1414;
+    color: #ffb4b4;
+    border-left: 4px solid #e05555;
+}
+.aviso.exito {
+    display: block;
+    background-color: #1a3a14;
+    color: #b4ffb4;
+    border-left: 4px solid #55e055;
+}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 640px) {
