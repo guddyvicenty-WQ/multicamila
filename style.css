@@ -297,7 +297,7 @@ body.oscuro b {
     display: block;
     background-color: #1a3a14;
     color: #b4ffb4;
-    border-left: 4px solid #55e055;
+    border-left: 1px solid #55e055;
 }
 
 /* ========== RESPONSIVE ========== */
