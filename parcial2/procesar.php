@@ -29,4 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     echo "<p><strong>Te atiende steven</strong></p>";
     echo "<p><small>Parcial 2 - steven - 11 de agosto de 2026</small></p>";
+} else {
+    echo "acceso no permitido. Por favor, complete el formulario en <a href='index.html'>Óptica Mirasol</a>.";
 }
+?>
