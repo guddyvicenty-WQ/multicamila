@@ -20,11 +20,11 @@
         @csrf
         <div class="form-group">
             <label for="nombre">Nombre de la herramienta:</label>
-            <input type="text" id="nombre" name="nombre" value="{{ old('nombre') }}" required>
+            <input type="text" id="nombre" name="nombre" value="{{ old('nombre') }}">
         </div>
         <div class="form-group">
             <label for="precio">Precio en Bs:</label>
-            <input type="number" id="precio" name="precio" value="{{ old('precio') }}" required>
+            <input type="number" id="precio" name="precio" value="{{ old('precio') }}">
         </div>
         <button type="submit" class="btn btn-success">Registrar herramienta</button>
     </form>
