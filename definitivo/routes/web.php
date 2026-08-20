@@ -38,6 +38,7 @@ Route::post('/solicitudes/nueva', function () {
         'plan_id'   => 'required|exists:plans,id',
         'domicilio' => 'required|string|max:255',
         'nombre'    => 'required|string|max:255',
+        'stock'     => 'required|integer|min:0',
     ], [
         'plan_id.required'    => 'El plan es obligatorio.',
         'plan_id.exists'      => 'El plan seleccionado no es válido.',
@@ -47,12 +48,16 @@ Route::post('/solicitudes/nueva', function () {
         'nombre.required'     => 'El nombre es obligatorio.',
         'nombre.string'       => 'El nombre debe ser una cadena de texto.',
         'nombre.max'          => 'El nombre no puede tener más de 255 caracteres.',
+        'stock.required'      => 'El stock es obligatorio.',
+        'stock.integer'       => 'El stock debe ser un número entero.',
+        'stock.min'           => 'El stock debe ser un número positivo.',
     ]);
 
     Solicitud::create([
         'plan_id'   => request()->input('plan_id'),
         'domicilio' => request()->input('domicilio'),
         'nombre'    => request()->input('nombre'),
+        'stock'     => request()->input('stock', 0),
     ]);
 
     return redirect('/solicitudes');
