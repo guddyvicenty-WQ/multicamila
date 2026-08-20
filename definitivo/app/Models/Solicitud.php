@@ -12,6 +12,7 @@ class Solicitud extends Model
             'plan_id',
             'domicilio',
             'nombre',
+            'stock',
         ];
 
         public function plan()
