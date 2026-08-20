@@ -40,6 +40,11 @@
                 <input type="text" id="nombre" name="nombre" class="form-control" 
                     placeholder="Ej: Juan Pérez" value="{{ old('nombre') }}">
             </div>
+            <div class="form-group">
+                <label for="stock">Cupos disponibles para esta instalación:</label>
+                <input type="number" id="stock" name="stock" class="form-control" 
+                    placeholder="Ej: 10" value="{{ old('stock', 0) }}" min="0">
+            </div>
 
             <button type="submit" class="btn-submit">Enviar solicitud</button>
         </form>
